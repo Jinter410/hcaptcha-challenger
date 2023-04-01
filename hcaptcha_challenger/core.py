@@ -676,6 +676,7 @@ class HolyChallenger:
 
                 # [👻] 滤除无法处理的挑战类别
                 if drop := self.tactical_retreat(ctx) in [self.CHALLENGE_BACKCALL]:
+                    self.utils.refresh(ctx)
                     ctx.switch_to.default_content()
                     return drop
 
